@@ -31,8 +31,8 @@ int 0x10
 
 mov al, "3"
 int 0x10
-mov bx, [the_secret]
-add bx, 0x7c00
+mov bx, the_secret ; EDIT: turns out i was not offsetting by the memory address 'the_secret' but rather the pointe/accessor [the_secret]
+add bx, 0x7c00 ;add offset
 mov al, [bx]
 int 0x10
 
@@ -41,7 +41,7 @@ int 0x10
 
 mov al, "4"
 int 0x10
-mov al, [0x7c2d]
+mov al, [bx]
 int 0x10
 
 jmp $
