@@ -10,7 +10,7 @@ call print
 
 call print_nl ; newline
 
-mov dx, 0x125e
+mov dx, 0x125e    ; dx is the data register. it is used for input/output operations as well as multiplication/division for large values
 call print_hex
 
 jmp $
