@@ -40,5 +40,7 @@ end:
     popa
     ret
 
+%include "boot_sector_print.asm"
+
 HEX_OUT:
     db '0x0000', 0  ; reserve memory for new string
