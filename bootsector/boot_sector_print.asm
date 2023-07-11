@@ -14,7 +14,14 @@ start:
     
     cmp al, 0       ; compare: does register al = 0, which is the null terminator for the string
     je done         ; je: 'jump if equal', used with 'cmp'
+   
+    ; print
+    mov ah, 0x0e    ; tty mode
+    int 0x10
     
+    add bx, 1       ; increment pointer and do next iteration of the loop
+    jmp start 
+
 done:
     popa
     ret
