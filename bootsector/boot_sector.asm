@@ -17,4 +17,8 @@ loop:
 times 510-($-$$) db 0
 
 ; "magic number"
+; x86 data definitions
+; db = 'Define Byte'      -- 8 bits
+; dw = 'Define Word'      -- 2 bytes on x86 32-bit system
+; dd = 'Define Double'    -- 4 bytes on x86 32-bit system
 dw 0xaa55
